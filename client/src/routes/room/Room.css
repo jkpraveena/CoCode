@@ -1,0 +1,158 @@
+/* Add Bootstrap classes for modern styling */
+
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css');
+
+.room {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #f5f7fa; /* Light grayish background */
+}
+
+.roomSidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Moderate gap between elements */
+    background-color: #eef2f7; /* Soft light grayish blue */
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.languageFieldWrapper {
+    padding: 15px 20px;
+    background-color: #b3c7d6; /* Light pastel blue */
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.languageField {
+    padding: 12px 18px;
+    background-color: #f1f7fc; /* Soft off-white */
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    font-size: 1rem;
+    color: #333;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.roomCodeEditor {
+    flex: 1;
+}
+
+.roomSidebarCopyBtn {
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 12px 20px;
+    color: white;
+    background-color: #4caf50; /* Fresh green */
+    border: 2px solid #4caf50;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.roomSidebarCopyBtn:hover {
+    color: black;
+    background-color: white;
+}
+
+.roomSidebarBtn {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 12px 18px;
+    background-color: #007bff; /* Calm blue */
+    border: 1px solid #007bff;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.roomSidebarBtn:hover {
+    color: white;
+    background-color: #0056b3;
+}
+
+/* Unique Multiple Choice Dropdown */
+.languageFieldWrapper::after {
+    content: "▼"; /* Custom dropdown arrow */
+    font-size: 1.2rem;
+    color: #333;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.languageFieldWrapper {
+    position: relative;
+}
+
+.languageField {
+    padding-right: 40px; /* Make space for the custom arrow */
+}
+
+/* Styling the Users Section */
+.roomSidebarUsersWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Increased gap between user elements */
+}
+
+.roomSidebarUsers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Increased gap between user avatars */
+}
+
+.roomSidebarUsersEach {
+    display: grid;
+    justify-items: center;
+}
+
+.roomSidebarUsersEachAvatar {
+    background-color: #8e24aa; /* Vibrant purple */
+    color: white;
+    border-radius: 50%;
+    min-width: 40px;
+    min-height: 40px;
+    padding: 10px;
+    font-size: medium;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.roomSidebarUsersEachName {
+    font-weight: bold;
+    font-size: small;
+    color: #444;
+    text-align: center;
+    margin-top: 5px;
+}
+
+@media screen and (min-width: 991px) {
+    .room {
+        flex-direction: row;
+    }
+
+    .roomSidebar {
+        flex: 0.3;
+        padding: 25px;
+    }
+
+    .roomSidebar > *:nth-child(2) {
+        margin-top: auto;
+    }
+
+    .roomCodeEditor {
+        flex: 0.7;
+    }
+}
